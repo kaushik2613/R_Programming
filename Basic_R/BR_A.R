@@ -6,7 +6,7 @@ library(caret)
 library(data.table)
 
 # Load the dataset
-data <-read.csv("C:/Users/kaish/Downloads/dataset_DT.csv")
+data <-read.csv("your_path/dataset_DT.csv")
 print(data)
 str(data)
 sum(is.na(data))
@@ -189,6 +189,7 @@ top_features_selection_vector <- (top_features_selction)
 print(top_features_selection_vector)
 aggregated_data <- cleaned2_dataset_final_encoded1 %>%
   group_by(cleaned2_dataset_final_encoded1$y) %>% 
+
 
 
 
