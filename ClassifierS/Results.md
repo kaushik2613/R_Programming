@@ -1,5 +1,7 @@
 Decision Tree Classifier
+
 Results :
+
 <img width="614" height="404" alt="image" src="https://github.com/user-attachments/assets/e398d498-0b1c-4efa-b891-dba7e3fd2287" />
 
 <img width="940" height="430" alt="image" src="https://github.com/user-attachments/assets/e3ef7123-b182-441f-8273-d707851369f7" />
@@ -24,6 +26,7 @@ Feature extraction : TF-IDF (Term Frequency-Inverse Document Frequency) is a num
 Also, we can see from confusion matrix that most of the mails are marked as not spam followed by spam emails which also gives us relatively more accuracy of about 94% for our Navies Bayes classifier.
 
 <img width="903" height="516" alt="image" src="https://github.com/user-attachments/assets/329fcdac-2e5d-4105-bb43-5c1edc45e9a4" />
+
 Results:
 The Gaussian Naive Bayes model was trained on the training data. The model achieved an accuracy score of approximately 94% on the test set. The confusion matrix was plotted to visualize the model's performance, highlighting true positives, true negatives, false positives, and false negatives.
 The classifier's ability to handle large feature sets and its efficiency in training contribute significantly to its performance in text classification tasks like spam detection.
@@ -37,10 +40,13 @@ Nearest Neighbour Classifier (KNN) :
 
 a.	Describe the Nearest Neighbours method and why scaling is important in KNN.
  Standard scaling is used and the best 3 attributes as seen are Age, BMI, and Glucose as features in the context of predicting diabetes outcomes is based on their strong correlations with the target variable (Outcome). The Nearest Neighbours method is a simple, instance-based learning algorithm where the model predicts the class of a data point based on the majority class of its K nearest neighbours in the feature space. The choice of K can significantly impact the model's performance. Scaling is crucial in KNN because the algorithm relies on distance calculations; features with larger ranges can disproportionately influence the outcome if they are not scaled. Standardizing features ensures that all attributes contribute equally to the distance metrics.
-b.	Explain what your criteria was for selecting the three attributes. What other 3 attribute can you choose? Visualizations of the target variable with three most significant attributes in a 2D projection, and write your observations in 4 - 5 lines in the same collab file 
+ 
+b.	Explain what your criteria was for selecting the three attributes. What other 3 attribute can you choose? Visualizations of the target variable with three most significant attributes in a 2D projection.
 The three attributes—Glucose, BMI, and Age—were selected based on their high correlation with the target variable (Outcome). These features were identified as potentially having the most significant impact on the prediction of diabetes. Alternatively, one could consider features like Blood Pressure or Insulin based on their domain significance. Visualizing the target variable against these attributes in a 2D projection can help to observe the distribution and separability of classes, leading to insights about the data.
+
 c.	Explain Pearson's Correlation Coefficient, write the observations from heatmaps drawn. 
 Pearson's Correlation Coefficient measures the linear correlation between two variables, with a value ranging from -1 to 1. A value close to 1 indicates a strong positive correlation, -1 indicates a strong negative correlation, and 0 indicates no correlation. From the heatmaps drawn, we can observe which features correlate strongly with the Outcome variable, informing our feature selection and model building. Hence from heatmap drawn we can see that Glucose and Bims have the highest correlation when compared to other features.
+
 d.	Interpret and compare the results.
  Here we choose k as 3, 5 and 10 as in case of 3 and 5 we have odd values of k which helps us to avoid ties in binary classification problems. Also, we test k as 10 as we have a relatively larger dataset for making the right decision. Also, we see that k = 12 has the highest accuracy using elbow method and alps we see that error rate decreases as value increases. Additionally, we see from the scatter plot that that Glucose vs Age has more points near a specific glucose range as compared to the other scatter plot plotted.
 
